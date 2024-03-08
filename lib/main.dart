@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,15 +32,28 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text('Positioned Widget'),
       ),
       body: Container(
-        height: double.infinity,
-        width: double.infinity,
+        height: 200,
+        width: 300,
         color: Colors.blue,
         child: Stack(
           children: [
-            Container(
-              height: 150,
-              width: 150,
-              color: Colors.red,
+            Positioned(
+              top: 10,
+              right: 41,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+              ),
+            ),
+            Positioned(
+              bottom: 10,
+              left: 41,
+              child: Container(
+                height: 100,
+                width: 100,
+                color: Colors.white,
+              ),
             ),
           ],
         ),
